@@ -1,0 +1,247 @@
+/* 🌿 Root Variables for Soft Theme */
+:root {
+    --bg-color: #f2f0f5; /* Gentle grayish-lavender */
+    --text-color: #2c2a35; /* Deep charcoal gray */
+    --primary-color: #7a698d; /* Muted dusty lilac */
+    --secondary-color: #b8a9c9; /* Soft warm gray */
+    --button-color: #5e4b66; /* Elegant rosewood */
+    --accent-color: #c9b8d1; /* Subtle pastel lavender */
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+    --bg-color: #1f1c24;
+    --text-color: #eae6f0;
+    --primary-color: #5b486e;
+    --secondary-color: #3d2e4a;
+    --button-color: #8874a3;
+    --accent-color: #afa1c2;
+}
+
+/* 🖥️ General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(74, 122, 1);
+    color: var(--text-color);
+    text-align: center;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* 🌟 Header */
+header {
+    background: rgb(24, 3, 65);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* 🎭 Dark Mode Toggle */
+#theme-toggle {
+    background: var(--button-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: var(--accent-color);
+}
+
+/* 📌 Sections */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ✨ Hero Section */
+.hero {
+    background: rgb(114, 114, 3);
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* 🧑‍💻 About Section (Image + Text Side by Side) */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: left;
+    background: rgb(44, 3, 3);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    margin: auto;
+    color: white;
+}
+
+/* 🎓 Resume Download Button */
+.resume-btn {
+    display: inline-block;
+    background: #6d5b95; /* Soft purple for a calm look */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.resume-btn:hover {
+    background: #46344e; /* Slightly darker purple */
+    transform: scale(1.05);
+}
+
+/* 🎯 Skills Section */
+#skills {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2em;
+    color: #4a3f66; /* Soft purple */
+    margin-bottom: 20px;
+}
+
+/* Skills List as a Grid */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive */
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.skills-list li {
+    background: #6d5b95; /* Calm purple */
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: scale(1.05);
+    background: #46344e; /* Darker shade on hover */
+}
+
+/* 🖼️ Profile Picture */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* 🏗️ Projects */
+.project {
+    background: rgb(24, 4, 37);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 15px auto;
+    max-width: 650px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.project a {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: black;
+    padding: 10px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 12px;
+    transition: background 0.3s ease;
+}
+
+.project a:hover {
+    background: var(--button-color);
+}
+
+/* 🔗 Contact Section */
+#contact a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: var(--button-color);
+}
+
+/* 📌 Footer */
+footer {
+    background: var(--primary-color);
+    color: rgba(10, 10, 10, 0.938);
+    padding: 12px;
+    position: relative;
+    margin-top: 20px;
+}
